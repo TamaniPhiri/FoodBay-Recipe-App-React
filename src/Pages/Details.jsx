@@ -29,6 +29,8 @@ const Details = () => {
     <div>
       <h1>{mealDetails.strMeal}</h1>
       {/* Display other details of the meal */}
+      <img src={mealDetails.strThumb} alt="img"className=' h-full w-full' />
+      <p>{mealDetails.instructions}</p>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Search = () => {
   const API_BASE_URL = "https://www.themealdb.com/api/json/v1/1";
@@ -35,7 +35,7 @@ const Search = () => {
 
   useEffect(() => {
     calculateTotalPages();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [meals]);
 
   const fetchMealCategories = async () => {
@@ -185,9 +185,12 @@ const Search = () => {
                 </div>
                 {showButton && (
                   <div className="flex items-center justify-center mt-4">
-                    <Link to={`/details/${item.idMeal}`} className="flex shadow-xl flow-row items-center px-6 py-1 rounded-md bg-[#00fa9a]">
-      ➡
-    </Link>
+                    <Link
+                      to={`/details/${item.idMeal}`}
+                      className="flex shadow-xl flow-row items-center px-6 py-1 rounded-md bg-[#00fa9a]"
+                    >
+                      ➡
+                    </Link>
                   </div>
                 )}
               </div>

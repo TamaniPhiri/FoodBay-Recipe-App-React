@@ -11,10 +11,10 @@ const Hero = () => {
           Try FoodBay, one of the best recipe apps on the internet, no ads, no pricing, just good food for everybody.
         </p>
         <div className="flex flex-row gap-2 items-center w-full py-4 md:justify-start justify-center">
-          <button className=" bg-[#3e4edf] hover:bg-[#2034e7] text-white px-4 py-1 rounded-2xl hover:scale-105 duration-500">
+          <button className=" bg-[#038373] hover:bg-[#12544c] text-white px-4 py-1 rounded-md hover:scale-105 duration-500">
             Find out more
           </button>
-          <button className=" bg-gray-900 hover:bg-gray-600 text-white px-4 py-1 rounded-2xl hover:scale-105 duration-500">
+          <button className=" bg-gray-900 hover:bg-gray-600 text-white px-4 py-1 rounded-md hover:scale-105 duration-500">
             Get the app
           </button>
         </div>
