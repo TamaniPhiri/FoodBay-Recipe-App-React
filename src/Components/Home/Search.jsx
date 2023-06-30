@@ -142,7 +142,7 @@ const Search = () => {
       <div className="flex w-full items-center justify-start md:justify-center text-xs text-gray-700">
         <p>Filter by category</p>
       </div>
-      <div className="flex flex-row my-2 w-full flex-wrap">
+      <div className="flex flex-row my-2 w-full items-center justify-center flex-wrap">
         {mealCategories.map((category, index) => (
           <div
             key={category.strCategory}
