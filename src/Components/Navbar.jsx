@@ -7,11 +7,11 @@ const Navbar = () => {
         setOpen(!open);
     };
   return (
-    <div className="bg-[#038373] flex z-50 shadow-2xl top-0 sticky px-4 md:px-8 flex-row w-full items-center justify-center">
+    <div className="bg-gray-900 flex z-50 shadow-2xl top-0 sticky px-4 md:px-8 flex-row w-full items-center justify-center">
       <nav className="flex flex-row w-full py-4 md:py-6 items-center justify-between">
         <div className="text-white">MEALDB</div>
         <div className="md:flex hidden items-center">
-          <ul className="md:flex hidden items-center text-lime-100 flex-row gap-3">
+          <ul className="md:flex hidden items-center text-orange-300 flex-row gap-3">
             <li>
               <a href="#" className=" hover:text-white">
                 Recipes
@@ -27,10 +27,10 @@ const Navbar = () => {
                 Search
               </a>
             </li>
-            <li>
+            <li className="hover:scale-105 transition-all">
               <a
                 href="#"
-                className="px-2 py-1 shadow-xl rounded-md bg-[#00c88b] text-white hover:bg-white hover:text-lime-900"
+                className="px-2 py-1 shadow-xl rounded-md bg-rose-900 text-white transition-all hover:bg-rose-800"
               >
                 Register
               </a>
@@ -50,27 +50,27 @@ const Navbar = () => {
                   <path d="M452 656c12 12 18 26.333 18 43s-6 31-18 43c-12 10.667-26.333 16-43 16s-31-5.333-43-16L234 590 102 742c-12 10.667-26.333 16-43 16s-31-5.333-43-16C5.333 730 0 715.667 0 699s5.333-31 16-43l138-156L16 342C5.333 330 0 315.667 0 299s5.333-31 16-43c12-10.667 26.333-16 43-16s31 5.333 43 16l132 152 132-152c12-10.667 26.333-16 43-16s31 5.333 43 16c12 12 18 26.333 18 43s-6 31-18 43L314 500l138 156" />
                 </svg>
               </button>
-              <div className="absolute h-screen w-1/2 bg-[#038373] shadow-xl right-0 top-[100%]">
+              <div className="absolute h-screen w-1/2 bg-gray-800 shadow-xl right-0 top-[100%]">
                 <ul className="flex flex-col text-white w-full gap-2 p-1 items-center">
                   <li className="flex w-full">
-                    <a href="#" className="w-full p-1 rounded-md hover:bg-[#176158] flex">
+                    <a href="#" className="w-full p-1 rounded-md hover:bg-gray-900 flex">
                       Recipes
                     </a>
                   </li>
                   <li className="flex w-full">
-                    <a href="#" className="w-full p-1 rounded-md hover:bg-[#176158] flex">
+                    <a href="#" className="w-full p-1 rounded-md hover:bg-gray-900 flex">
                       Random
                     </a>
                   </li>
                   <li className="flex w-full">
-                    <a href="#" className="w-full p-1 rounded-md hover:bg-[#176158] flex">
+                    <a href="#" className="w-full p-1 rounded-md hover:bg-gray-900 flex">
                       Search
                     </a>
                   </li>
                   <li className="flex w-full p-1">
                     <a
                       href="#"
-                      className="px-2 py-1 shadow-xl rounded-md w-fit flex bg-[#00c88b] text-white hover:bg-white hover:text-lime-900"
+                      className="px-2 py-1 shadow-xl rounded-md w-fit flex bg-rose-900 text-white hover:bg-rose-800"
                     >
                       Register
                     </a>

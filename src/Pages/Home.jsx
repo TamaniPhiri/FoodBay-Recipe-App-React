@@ -1,9 +1,8 @@
-import bg from '../assets/bg.svg'
 import Hero from '../Components/Home/Hero'
 import Search from '../Components/Home/Search'
 const Home = () => {
   return (
-    <div style={{backgroundImage:`url(${bg})`}} className='h-full resize-none bg-no-repeat px-4 md:px-8 bg-cover bg-fixed w-full flex flex-col'>
+    <div className='bg-gradient-to-r from-rose-400 px-4 md:px-8 to-orange-300'>
       <Hero/>
       <Search/>
     </div>
