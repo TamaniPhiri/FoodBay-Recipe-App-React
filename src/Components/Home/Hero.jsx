@@ -4,7 +4,7 @@ const Hero = () => {
     <div className="flex items-center md:py-0 py-16 justify-center w-full md:flex-row md:h-screen h-auto flex-col">
       {/* Header intro */}
       <div className="flex flex-col w-full md:w-1/2 items-center justify-center">
-        <h1 className=" w-full text-center text-white md:text-left text-2xl font-bold md:text-5xl">
+        <h1 className=" w-full text-center text-gray-900 md:text-left text-2xl font-bold md:text-5xl">
           Don&#39;t know what to cook today?
         </h1>
         <p className=" w-full text-center md:text-left py-4 text-rose-900">

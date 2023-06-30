@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <div className="bg-gray-900 flex z-50 shadow-2xl top-0 sticky px-4 md:px-8 flex-row w-full items-center justify-center">
       <nav className="flex flex-row w-full py-4 md:py-6 items-center justify-between">
-        <div className="text-white">MEALDB</div>
+        <a href="/" className="text-orange-300 font-bold">MEALDB</a>
         <div className="md:flex hidden items-center">
           <ul className="md:flex hidden items-center text-orange-300 flex-row gap-3">
             <li>
