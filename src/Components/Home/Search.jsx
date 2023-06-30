@@ -119,9 +119,9 @@ const Search = () => {
   return (
     <div className="w-full h-auto flex flex-col items-center justify-center">
       <div className="flex w-full items-center justify-center">
-        <h1>Search for recipes</h1>
+        <h1 className=" text-2xl pb-6 font-bold text-gray-200">Search for recipes</h1>
       </div>
-      <div className="flex w-full items-center justify-center">
+      <div className="flex w-full py-2 items-center justify-center">
         <input
           type="search"
           value={searchQuery}
@@ -131,7 +131,7 @@ const Search = () => {
               handleSearch();
             }
           }}
-          className="bg-gray-100 rounded-md outline-none p-1"
+          className="bg-gray-100 rounded-md outline-orange-100 p-1"
         />
       </div>
       <div className="flex flex-row my-2 flex-wrap">
@@ -139,27 +139,27 @@ const Search = () => {
           <div
             key={category.strCategory}
             className={`${
-              selected === index ? "bg-[#00fa9a]" : "bg-white"
-            } mr-2 my-[3] py-[0.5] px-2 rounded-xl cursor-pointer items-center justify-center`}
+              selected === index ? "bg-orange-300" : "bg-white"
+            } mr-2 my-[0.2em] py-[0.1em] px-2 rounded-xl cursor-pointer items-center justify-center`}
             onClick={() => {
               handleCategoryChange(category.strCategory);
               setSelected(index);
             }}
           >
-            <h1 className="text-gray-600">{category.strCategory}</h1>
+            <h1 className="text-gray-900 md:text-base text-sm">{category.strCategory}</h1>
           </div>
         ))}
       </div>
-      <div>
+      <div className="flex flex-row flex-wrap w-full pb-8 items-center justify-center gap-4">
         {loading ? (
-          <div className="flex w-full items-center justify-center py-6">
+          <div className="flex w-full h-screen items-center font-bold text-white justify-center">
             <p>Loading.....</p>
           </div>
         ) : (
           getPaginatedMeals().map((item, i) => (
             <div
               key={i}
-              className="bg-gray-200 pb-2 mt-8 mb-6 rounded-md overflow-hidden"
+              className="bg-white pb-2 mt-6 mb-4 rounded-md overflow-hidden"
             >
               <div className="flex w-full">
                 <img
@@ -170,16 +170,10 @@ const Search = () => {
               </div>
               <div className="flex w-full justify-between pt-2 px-2 flex-row flex-wrap items-center">
                 <div className="flex flex-col">
-                  <h1
-                    className="text-lg font-semibold text-gray-600"
-                    style={{ fontFamily: "poppins-medium" }}
-                  >
+                  <h1 className="text-sm font-semibold text-gray-900">
                     {item.strMeal}
                   </h1>
-                  <h1
-                    className="text-gray-500"
-                    style={{ fontFamily: "poppins-light" }}
-                  >
+                  <h1 className="text-gray-500">
                     {item.strArea}
                   </h1>
                 </div>
@@ -187,9 +181,9 @@ const Search = () => {
                   <div className="flex items-center justify-center mt-4">
                     <Link
                       to={`/details/${item.idMeal}`}
-                      className="flex shadow-xl flow-row items-center px-6 py-1 rounded-md bg-[#00fa9a]"
+                      className="flex shadow-xl flow-row items-center px-6 py-1 rounded-md bg-orange-300"
                     >
-                      ➡
+                        Details
                     </Link>
                   </div>
                 )}
@@ -198,14 +192,14 @@ const Search = () => {
           ))
         )}
         {totalPages > 1 && (
-          <div className="flex justify-center my-4">
+          <div className="flex justify-center my-4 w-full items-center">
             {Array.from({ length: totalPages }, (_, index) => (
               <button
                 key={index}
-                className={`mx-1 px-3 py-1 rounded-full ${
+                className={`mx-1 px-2 py-1 rounded-full ${
                   currentPage === index + 1
-                    ? "bg-[#00fa9a] text-white"
-                    : "bg-gray-200"
+                    ? "bg-rose-900 text-white"
+                    : "bg-white"
                 }`}
                 onClick={() => handlePageChange(index + 1)}
               >

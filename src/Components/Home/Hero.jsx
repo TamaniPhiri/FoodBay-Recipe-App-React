@@ -1,13 +1,13 @@
 import { Player} from '@lottiefiles/react-lottie-player';
 const Hero = () => {
   return (
-    <div className="flex items-center justify-center w-full md:flex-row md:h-screen h-auto flex-col">
+    <div className="flex items-center md:py-0 py-16 justify-center w-full md:flex-row md:h-screen h-auto flex-col">
       {/* Header intro */}
-      <div className="flex flex-col w-full md:pt-0 pt-16 md:w-1/2 items-center justify-center">
+      <div className="flex flex-col w-full md:w-1/2 items-center justify-center">
         <h1 className=" w-full text-center text-white md:text-left text-2xl font-bold md:text-5xl">
           Don&#39;t know what to cook today?
         </h1>
-        <p className=" w-full text-center md:text-left py-4 text-lime-900">
+        <p className=" w-full text-center md:text-left py-4 text-rose-900">
           Try FoodBay, one of the best recipe apps on the internet, no ads, no pricing, just good food for everybody.
         </p>
         <div className="flex flex-row gap-2 items-center w-full py-4 md:justify-start justify-center">
