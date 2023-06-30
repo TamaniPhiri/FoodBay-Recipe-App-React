@@ -24,13 +24,12 @@ const Details = () => {
   if (!mealDetails) {
     return <div>Loading...</div>;
   }
-
   return (
-    <div>
-      <h1>{mealDetails.strMeal}</h1>
+    <div className="bg-gradient-to-r from-rose-400 to-orange-300 flex w-full px-4 md:px-8 flex-col items-center justify-center">
+      <h1 className=' text-3xl py-10'>{mealDetails.strMeal}</h1>
       {/* Display other details of the meal */}
-      <img src={mealDetails.strThumb} alt="img"className=' h-full w-full' />
-      <p>{mealDetails.instructions}</p>
+      <img src={mealDetails.strMealThumb} alt="img"className='object-cover w-full h-96 rounded-md' />
+      <p className='md:text-left text-center py-6'>{mealDetails.strInstructions}</p>
     </div>
   );
 };
