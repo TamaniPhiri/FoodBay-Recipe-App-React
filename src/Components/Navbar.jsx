@@ -7,7 +7,7 @@ const Navbar = () => {
         setOpen(!open);
     };
   return (
-    <div className="bg-[#038373] flex shadow-2xl top-0 sticky px-4 md:px-8 flex-row w-full items-center justify-center">
+    <div className="bg-[#038373] flex z-50 shadow-2xl top-0 sticky px-4 md:px-8 flex-row w-full items-center justify-center">
       <nav className="flex flex-row w-full py-4 md:py-6 items-center justify-between">
         <div className="text-white">MEALDB</div>
         <div className="md:flex hidden items-center">
