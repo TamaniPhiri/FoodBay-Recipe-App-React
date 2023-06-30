@@ -82,7 +82,7 @@ const Navbar = () => {
             <button onClick={handleMenu}>
               <svg fill="none" viewBox="0 0 24 24" height="1.5em" width="1.5em">
                 <path
-                  fill="white"
+                  fill="#fff"
                   d="M7 6a3 3 0 00-3 3h16a3 3 0 00-3-3H7zM7 18a3 3 0 01-3-3h16a3 3 0 01-3 3H7zM3 11a1 1 0 100 2h18a1 1 0 100-2H3z"
                 />
               </svg>
