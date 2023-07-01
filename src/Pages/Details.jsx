@@ -24,11 +24,32 @@ const Details = () => {
   if (!mealDetails) {
     return <div>Loading...</div>;
   }
+
+  const renderIngredientThumbnails = () => {
+    const ingredientThumbnails = [];
+    for (let i = 1; i <= 20; i++) {
+      const ingredient = mealDetails[`strIngredient${i}`];
+      const measure = mealDetails[`strMeasure${i}`];
+      if (ingredient) {
+        const ingredientImageUrl = `https://www.themealdb.com/images/ingredients/${ingredient}-Small.png`;
+        ingredientThumbnails.push(
+          <div className="flex  flex-col items-center" key={i}>
+            <img src={ingredientImageUrl} alt={ingredient} />
+            <span>{measure} {ingredient}</span>
+          </div>
+        );
+      }
+    }
+    return ingredientThumbnails;
+  };
   return (
     <div className="bg-gradient-to-r from-rose-400 to-orange-300 flex w-full px-4 md:px-8 flex-col items-center justify-center">
       <h1 className=' text-3xl py-10'>{mealDetails.strMeal}</h1>
       {/* Display other details of the meal */}
       <img src={mealDetails.strMealThumb} alt="img"className='object-cover w-full h-96 rounded-md' />
+      <div className="flex flex-wrap flex-row gap-4 items-center w-full justify-center">
+        {renderIngredientThumbnails()}
+      </div>
       <p className='md:text-left text-center py-6'>{mealDetails.strInstructions}</p>
     </div>
   );
