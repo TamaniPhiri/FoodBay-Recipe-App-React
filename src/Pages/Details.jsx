@@ -50,7 +50,7 @@ const Details = () => {
       <div className="flex flex-wrap flex-row gap-4 items-center w-full justify-center">
         {renderIngredientThumbnails()}
       </div>
-      <p className='md:text-left text-center py-6'>{mealDetails.strInstructions}</p>
+      <p className='md:text-left text-center px-0 py-6'>{mealDetails.strInstructions}</p>
     </div>
   );
 };
